@@ -1,0 +1,12 @@
+/*
+ * File name:   jump.css
+ * Desc:        Define styles used for jump page.
+ * Author:      Richard Wang <wanglei_gmgc@hotmail.com>
+ * Create:      2022-04-08
+ */
+
+/* Leave room for navbar and show body below it. */
+#body {
+    position: relative;
+    padding-top: 20%;
+}

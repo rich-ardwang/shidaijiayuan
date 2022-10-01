@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Richard Wang [wanglei_gmgc@hotmail.com]">
+    <meta name="description" content="Create: 2020-10-09">
+
+    <!-- Import CSS files -->
+    <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/header.css" rel="stylesheet">
+    <link href="../css/footer.css" rel="stylesheet">
+    <link href="../css/register.css" rel="stylesheet">
+
+    <title>账号注册</title>
+</head>
+
+<body class="bg-dark">
+    <!-- header content-->
+    <nav id="header" class="navbar navbar-expand-md fixed-top">
+        <a href="../php/index.php" class="text-info mr-auto"><h4 class="text-info mr-auto" >绿地时代嘉苑团购网</h4></a>
+        <a href="sign-in.html" class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">登录</a>
+    </nav>
+
+    <!-- standard body -->
+    <div class="container-fluid">
+        <div id="mainRow" class="row">
+            <div class="col-md-6">
+                <h1 id="welcome" class="h3 font-weight-normal text-info">Hi，欢迎免费注册使用时代嘉苑团购网！</h1>
+                <figure class="figure">
+                    <img src="../img/black-cat.jpg" class="figure-img img-fluid rounded py-md-2" alt="black cats">
+                    <figcaption class="figure-caption text-right">本系统旨在方便大家团购物资，不收集个人信息，放心使用。</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-6">
+                <!-- register form-->
+                <form id="regForm" novalidate was-validated>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control form-control-sm input-bg-color" id="bid" aria-describedby="bidHelp" placeholder="楼号" onfocusout="checkLoginBid()">
+                            <div class="invalid-feedback"><small>请输入有效的楼号！</small></div>
+                        </div>
+                        <div class="col-md-8 d-inline-flex">
+                            <h3 id="starKey" class="text-danger">*</h3>
+                            <small id="bidHelp" class="form-text text-info">楼号为1-20之间的数字。</small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <input type="tel" class="form-control form-control-sm input-bg-color" id="fid" aria-describedby="fidHelp" placeholder="房间号" onfocusout="checkLoginFid()">
+                            <div class="invalid-feedback"><small>请输入正确的房间号！</small></div>
+                        </div>
+                        <div class="col-md-8 d-inline-flex">
+                            <h3 id="starKey" class="text-danger">*</h3>
+                            <small id="fidHelp" class="form-text text-info">房间号为层号+户号，层号(01-30)，户号(01-08)，如0101，2604等。</small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <input type="password" class="form-control form-control-sm input-bg-color" id="firstInputPwd" aria-describedby="firstInputPwdHelp" placeholder="密码" onfocusout="checkFirstInputPsw()">
+                            <div class="invalid-feedback"><small>请输入规范的密码！</small></div>
+                        </div>
+                        <div class="col-md-8 d-inline-flex">
+                            <h3 id="starKey" class="text-danger">*</h3>
+                            <small id="firstInputPwdHelp" class="form-text text-info">密码可以包含字母、数字和特殊符号($@$!%*#?&)，长度6-20个字符。</small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <input type="password" class="form-control form-control-sm input-bg-color" id="againInputPwd" placeholder="确认密码" onfocusout="checkAgainInputPsw()">
+                            <div class="invalid-feedback"><small>两次输入的密码不一致！</small></div>
+                        </div>
+                        <div class="col-md-8 d-inline-flex">
+                            <h3 id="starKey" class="text-danger">*</h3>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-8 d-inline-flex">
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="loginCheck" checked onclick="checkLoginChk()">
+                                <label class="form-check-label text-white" for="loginCheck">我已经仔细阅读并同意</label>
+                                <a href="policy.html" class="text-primary" target="_blank"><small>《时代嘉苑团购网用户注册使用协议》</small></a>
+                                <div class="invalid-feedback"><small>注册前您必须同意使用协议！</small></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-4">
+                            <button id="btnReg" type="button" class="btn btn-primary btn-lg btn-block" disabled>注册</button>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div id="errorBoard" class="col-md">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- footer content-->
+    <div id="footer" class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-md text-center">
+                <nav class="navbar-text">
+                    <div id="footerCopyright" class="text-info">Copyright © 2022 - <span id="copy-year"></span> 王雷先生个人设计开发 版权所有</div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/popper.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="../vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../vendor/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script src="../vendor/cryptojs/rollups/sha256.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/register.js"></script>
+
+</body>
+</html>

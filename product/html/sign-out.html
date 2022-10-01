@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Richard Wang [wanglei_gmgc@hotmail.com]">
+    <meta name="description" content="Create: 2022-04-10">
+
+    <!-- Import CSS files -->
+    <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/header.css" rel="stylesheet">
+    <link href="../css/footer.css" rel="stylesheet">
+    <link href="../css/jump.css" rel="stylesheet">
+
+    <title>退出登录</title>
+</head>
+<body class="bg-dark">
+
+    <!-- header content-->
+    <nav id="header" class="navbar navbar-expand-md fixed-top">
+        <a href="../php/index.php" class="text-info mr-auto"><h4 class="text-info mr-auto" >绿地时代嘉苑团购网</h4></a>
+        <a href="sign-in.html" class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">登录</a>
+    </nav>
+
+    <!-- standard body -->
+    <div id="body" class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 offset-3 text-center">
+                <h1 id="jpShow" class="h3 font-weight-normal text-info"></h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/common.js"></script>
+    
+    <script>
+        // Logout the account and clear all the cookies.
+        removeCookie("bid");
+        removeCookie("fid");
+        removeCookie("token");
+        removeCookie("type");
+        
+        // Show the successful page.
+        var sec = 3;
+        setInterval("refer()", 1000);
+        function refer() {
+            if (0 == sec) {
+                location = "../php/index.php";
+            }
+            document.getElementById('jpShow').innerHTML = "您已退出登录，将在<mark class='text-danger'>" + sec + "秒</mark>" + "后转到主页面。";
+            sec--;
+        }
+    </script>
+
+    <!-- footer content-->
+    <div id="footer" class="container-fluid fixed-bottom">
+        <div class="row">
+            <div class="col-md text-center">
+                <nav class="navbar-text">
+                    <div class="text-info">Copyright © 2022 - <span id="copy-year"></span> 王雷先生个人设计开发 版权所有</div>
+                </nav>
+                <script>
+                    document.getElementById("copy-year").innerHTML = curentYear();
+                </script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

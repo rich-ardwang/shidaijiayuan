@@ -1,0 +1,44 @@
+﻿/*
+ * File name:   register.css
+ * Desc:        Define styles used for register.
+ * Author:      Richard Wang <wanglei_gmgc@hotmail.com>
+ * Create:      2022-04-08
+ */
+
+/* Leave room for navbar and show body below it. */
+body {
+    position: relative;
+    padding-top: 5%;
+}
+
+/* Set the distance between mainRow and the top of the body. */
+#mainRow {
+    padding-top: 3rem;
+}
+
+/* Set the position for welcome. */
+#welcome {
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* Set the position for asterisk. */
+#starKey {
+    padding-left: 5px;
+}
+
+/* Change the width for reset button. */
+#btnReset {
+    max-width: 15rem;
+}
+
+/* Set the padding-left for small tag. */
+small {
+    padding-left: 5px;
+}
+
+/* Leave some distance between footer-container and the above container. */
+.footer-container {
+    position: relative;
+    padding-top: 1.5rem;
+}

@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<h1>Accounting.js TEST</h1>
+
+<script src="dist/js/accounting.min.js"></script>
+<script src="../../js/common.js"></script>
+
+<script>
+    let money = accounting.formatMoney(12345678.078518); // $12,345,678.00
+    console.log(typeof money);
+    console.log(money);
+    let formatNumber = accounting.formatNumber('-0009581.157', 6);
+    console.log(formatNumber);
+    let unformatNumber = accounting.unformat(money);
+    console.log(typeof unformatNumber);
+    console.log(unformatNumber);
+</script>
+
+</body>
+</html>

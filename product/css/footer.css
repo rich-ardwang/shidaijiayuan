@@ -1,0 +1,18 @@
+/*
+ * File name:   footer.css
+ * Desc:        Define styles used for footer.
+ * Author:      Richard Wang <wanglei_gmgc@hotmail.com>
+ * Create:      2022-04-08
+ */
+
+/* Set padding and margin for the footerCopyright. */
+#footerCopyright {
+    padding: 5px;
+    margin: auto;
+}
+
+/* Set height and bg-color for footer */
+#footer {
+    min-height: 35px;
+    background-color: #303237;
+}

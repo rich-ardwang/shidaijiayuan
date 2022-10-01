@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Richard Wang [wanglei_gmgc@hotmail.com]">
+    <meta name="description" content="Create: 2022-04-08">
+
+    <!-- Import CSS files -->
+    <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/header.css" rel="stylesheet">
+    <link href="../css/footer.css" rel="stylesheet">
+    <link href="../css/sign-in.css" rel="stylesheet">
+
+    <title>登录</title>
+  </head>
+
+  <body class="bg-dark">
+    <!-- header content-->
+    <nav id="header" class="navbar navbar-expand-md fixed-top">
+        <a href="../php/index.php" class="text-info mr-auto"><h4 class="text-info mr-auto" >绿地时代嘉苑团购网</h4></a>
+        <a href="register.html" class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">免费注册</a>
+    </nav>
+
+    <!-- standard body -->
+    <div id="body" class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-md text-center">
+          <h1 class="h5 font-weight-normal text-info">志愿者或居委会工作人员登录后可以发布官方组织的团购信息，享受快速核查，一键生成Execl文件等服务。</h1>
+          <h1 class="h5 font-weight-normal text-info">其他居民登录后可实时刷新团购信息并参团，享受在线下单，撤单，改单，查看历史订单等服务。</h1>
+        </div>
+      </div>
+
+      <div id="formRow" class="row">
+        <div class="col-sm-12 col-md-6 offset-md-3 text-center">
+            <form id="signinForm" class="form-sign-in" novalidate>
+                <label for="bid" class="sr-only">楼号</label>
+                <input type="text" id="bid" class="form-control input-bg-color mb-1" placeholder="楼号(1-20数字)，如：1，12等。">
+                <label for="fid" class="sr-only">房间号</label>
+                <input type="text" id="fid" class="form-control input-bg-color  mb-1" placeholder="房间号(层号+户号)，层号:01-30，户号:01-08。">
+                <label for="inputPassword" class="sr-only">密码</label>
+                <input type="password" id="inputPassword" class="form-control input-bg-color  mb-1" placeholder="密码">
+                <div class="invalid-feedback  mb-1"><small>楼号、房间号或密码不正确！</small></div>
+
+                <div class="form-group">
+                  <div class="custom-control custom-switch text-left">
+                    <input type="checkbox" class="custom-control-input" id="rememberMe">
+                    <label class="custom-control-label text-info" for="rememberMe">当天免登录</label>
+                  </div>
+                </div>
+
+                <button id="btnLogin" class="btn btn-lg btn-primary btn-block" type="button">登录</button>
+                <div class="text-left">
+                  <a class="text-info float-right" href="./register.html">还未注册？</a>
+                </div>
+            </form>
+        </div>
+          
+        <div class="col-sm-12 col-md-6 offset-md-3 text-center"><p id="output" class="text-warning"></p></div>
+      </div>
+
+    </div>
+
+    <!-- footer content-->
+    <div id="footer" class="container-fluid fixed-bottom">
+        <div class="row">
+            <div id="footerCopyright" class="col-md text-center">
+                <nav class="navbar-text">
+                    <div class="text-info">Copyright © 2022 - <span id="copy-year"></span> 王雷先生个人设计开发 版权所有</div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="../vendor/cryptojs/rollups/sha256.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/sign-in.js"></script>
+
+  </body>
+</html>

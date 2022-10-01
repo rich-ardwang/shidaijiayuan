@@ -1,0 +1,23 @@
+/*
+ * File name:   sign-in.css
+ * Desc:        Define styles used for sign in.
+ * Author:      Richard Wang <wanglei_gmgc@hotmail.com>
+ * Create:      2022-04-08
+ */
+
+/* Leave room for navbar and show body below it. */
+#body {
+    position: relative;
+    padding-top: 10%;
+}
+
+/* Tune-up the width for form in the col. */
+.form-sign-in {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+/* Set the distance between formRow and the top of the body. */
+#formRow {
+    padding-top: 6rem;
+}

@@ -1,0 +1,24 @@
+/*
+ * File name:   header.css
+ * Desc:        Define styles used for header.
+ * Author:      Richard Wang <wanglei_gmgc@hotmail.com>
+ * Create:      2022-04-08
+ */
+
+/* Tune-up the position of logo. */
+.navbar-brand {
+    padding-left: 2.8rem;
+}
+
+/* Set the properties of navbar. */
+.navbar {
+    background-color: #4e555b;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+/* Set logo size. */
+#headerLogo {
+    width: 40px;
+    height: 40px;
+}
